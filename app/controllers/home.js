@@ -97,6 +97,50 @@ $.youtubeButton.addEventListener('click', function(e)
 });
 
 //---------------------------------------------------
+//This is what the documentation says to do in regards to setting up Cloudpush modules retrievedDeviceToken(). --Lauren
+// Require the module
+
+var CloudPush = require('ti.cloudpush');
+var Cloud = require("ti.cloud");
+var deviceToken = null;
+ 
+// Initialize the module
+CloudPush.retrieveDeviceToken({
+    success: deviceTokenSuccess,
+    error: deviceTokenError
+});
+// Enable push notifications for this device
+// Save the device token for subsequent API calls
+function deviceTokenSuccess(e) {
+	alert('please work' + e.deviceToken);
+    deviceToken = e.deviceToken;
+    subscribeToChannel(deviceToken);
+}
+function deviceTokenError(e) {
+    alert('Failed to register for push notifications! ' + e.error);
+}
+ 
+// Process incoming push notifications
+CloudPush.addEventListener('callback', function (evt) {
+    alert("Notification received: " + evt.payload);
+});
+
+
+function subscribeToChannel (deviceToken) {
+ // Subscribes the device to the 'news_alerts' channel
+ // Specify the push type as either 'android' for Android or 'ios' for iOS
+    Cloud.PushNotifications.subscribeToken({
+        device_token: deviceToken,
+        channel: 'news_alerts',
+        type: Ti.Platform.name == 'android' ? 'android' : 'ios'
+    }, function (e) {
+ if (e.success) {
+            alert('Subscribed');
+        } else {
+            alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+        }
+    });
+}
 
 // open window
 $.home.open();

@@ -2,6 +2,23 @@
 	backgroundColor: "#222",
 	color : "#fff"
 },
-"Label":{
+"Label": {
    color : "#fff"
+},
+"#Push" : {
+	top : "20",
+	left : "10",
+},
+"#Login" : {
+	top : "110",
+	left : "10",
+},
+"#pushSwitch" : {
+	top : "10",
+	right : "10",
+},
+"#loginButton" : {
+	top : "100",
+	right : "10",
 }
+

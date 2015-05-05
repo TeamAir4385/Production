@@ -1,11 +1,12 @@
 <Alloy>
 	<Window id="contact" title="Contact Us" onOpen="doOpen" >
-		<Label top="15"center="0">Please feel free to contact us if you are interested or have any questions!</Label>
-        <TextArea id="textField1" hintText="First Name" top="65" center="0" width="75%" height="40" />	        
-        <TextArea id="textField2" hintText="Last Name" top="105" center="0" width="75%" height="40" /> 
-        <TextArea id="textField3" hintText="Emai Address" top="145" center="0" width="75%" height="40" />
-        <TextArea id="textField4" hintText="Phone Number" top="185" center="0" width="75%" height="40" />
-        
-        <Button id="submit" title="Submit"bottom="150"/>
+		<Label top="15" left="10" right="10">Please feel free to contact us if you are interested or have any questions!</Label>
+		<View id="lvContainer" top="65" >
+	        <TextField id="fname" class='tfWrapper' hintText="First Name"  />	        
+	        <TextField id="lname" class='tfWrapper' hintText="Last Name"  /> 
+	        <TextField id="email" class='tfWrapper' hintText="Email Address"  />
+	        <TextField id="phone" class='tfWrapper' hintText="Phone Number"  />
+        </View>
+        <Button id="submit" title="Submit" color="#fff" bottom="150" />
 	</Window>
 </Alloy>

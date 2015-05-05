@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-api-key-production" type="string">eGjM1NZqBAvb8kbCIJQpudFdK32l0iAn</property>
-    <property name="acs-api-key-development" type="string">RV3orTuIQ51fEgviFIP0l0boUClZZcrG</property>
-    <!--These lines of code force our app to use GCM instead of MGTT accoriding to www.tidev.io (Lauren)-->
-    <property name="acs-push-type-development" type="string">gcm</property>
-    <property name="acs-push-type-production" type="string">gcm</property>
-    <property name="acs-push-type" type="string">gcm</property>
+    <property name="acs-api-key-production" type="string">zVQ6altk03APCOxFjBJlfSITP70Zsz7k</property>
+    <property name="acs-api-key-development" type="string">PySupKzDhHKVDDunnBOJndMlBbQQPpNZ</property>
     <id>com.goapplication</id>
-    <name>Go Application</name>
+    <name>C.O.R.N. C.o.B.</name>RE
     <version>1.0</version>
     <publisher>Sgt</publisher>
     <url>http://www.goapplication.com</url>
@@ -20,7 +16,7 @@
     <guid>e7e55ef5-a7ab-462b-b9a1-fc2a64e28d36</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
-        <plist>
+        <plist>depricating
             <dict>
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
@@ -48,7 +44,7 @@
         <manifest>
             <application android:theme="@style/Theme.Gotheme"/>
             <uses-sdk android:minSdkVersion="10"/>
-            <uses-sdk android:targetSdkVersion="21"/>
+            <uses-sdk android:targetSdkVersion="20"/>
         </manifest>
     </android>
     <mobileweb>
@@ -70,7 +66,7 @@
         <target device="blackberry">false</target>
         <target device="mobileweb">true</target>
     </deployment-targets>
-    <sdk-version>3.5.0.GA</sdk-version>
+    <sdk-version>3.5.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
