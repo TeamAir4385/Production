@@ -1,14 +1,14 @@
 {
 	"target": "device",
 	"deployType": "test",
-	"classname": "CORNCOB",
-	"platformPath": "/Users/Home/Library/Application Support/Titanium/mobilesdk/osx/3.5.1.GA/android",
+	"classname": "WtCob",
+	"platformPath": "/Users/Aaron/Library/Application Support/Titanium/mobilesdk/osx/3.5.1.GA/android",
 	"modulesHash": "7fb655db1d51a26b74a2778ab4a02a6b",
 	"modulesManifestHash": "49cc8af6fef230ad06bc2ac0a8187ae4",
 	"modulesNativeHash": "e71bc1bb6ab1fd7f2c75a20fe9ab5d54",
 	"modulesBindingsHash": "4582c0381425b60b49286971d59ced25",
 	"gitHash": "96875c9",
-	"name": "C.O.R.N. C.o.B.",
+	"name": "WT CoB",
 	"id": "com.goapplication",
 	"analytics": true,
 	"publisher": "Sgt",
@@ -23,10 +23,10 @@
 	"mergeCustomAndroidManifest": false,
 	"encryptJS": true,
 	"minSDK": 10,
-	"targetSDK": 20,
+	"targetSDK": 16,
 	"propertiesHash": "36330ee3a7f12ef2044f8e73d97fa63c",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"jssFilesHash": "d41d8cd98f00b204e9800998ecf8427e",
-	"jarLibHash": "fad980305ea734fdc8cf04459898ef34"
+	"jarLibHash": "ed2f5d0ea60b5fffadc4ef2ea76060aa"
 }

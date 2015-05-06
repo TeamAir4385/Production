@@ -3,7 +3,7 @@
     <property name="acs-api-key-production" type="string">zVQ6altk03APCOxFjBJlfSITP70Zsz7k</property>
     <property name="acs-api-key-development" type="string">PySupKzDhHKVDDunnBOJndMlBbQQPpNZ</property>
     <id>com.goapplication</id>
-    <name>C.O.R.N. C.o.B.</name>RE
+    <name>WT CoB</name>
     <version>1.0</version>
     <publisher>Sgt</publisher>
     <url>http://www.goapplication.com</url>
@@ -44,7 +44,7 @@
         <manifest>
             <application android:theme="@style/Theme.Gotheme"/>
             <uses-sdk android:minSdkVersion="10"/>
-            <uses-sdk android:targetSdkVersion="20"/>
+            <uses-sdk android:targetSdkVersion="16"/>
         </manifest>
     </android>
     <mobileweb>

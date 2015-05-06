@@ -151,7 +151,7 @@ function Controller() {
     $.submit.addEventListener("click", function() {
         var emailDialog = Titanium.UI.createEmailDialog();
         emailDialog.setSubject("Please Sign Me Up!");
-        emailDialog.setToRecipients([ "am934743@gmail.com" ]);
+        emailDialog.setToRecipients([ "wtcollegeofbusiness@gmail.com" ]);
         emailDialog.setMessageBody("I'm curious about what the College of Business has to offer!\n\nFirst Name: " + $.fname.value + "\nLast Name: " + $.lname.value + "\nEmail: " + $.email.value + "\nPhone number: " + $.phone.value);
         emailDialog.addEventListener("complete", function(e) {
             e.result == emailDialog.SENT || alert("message was not sent. result = " + e.result);

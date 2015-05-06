@@ -25,7 +25,7 @@ $.submit.addEventListener('click', function(e) {
 	
 	var emailDialog = Titanium.UI.createEmailDialog();
 		emailDialog.setSubject("Please Sign Me Up!");
-		emailDialog.setToRecipients(['am934743@gmail.com']);
+		emailDialog.setToRecipients(['wtcollegeofbusiness@gmail.com']);
 		
 		
 	if (Ti.Platform.name == 'iPhone OS') {

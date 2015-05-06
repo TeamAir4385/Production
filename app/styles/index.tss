@@ -13,9 +13,11 @@
 	height: 65,
 },
  
-"#go" :{
-	top: '15%',
-}
+"#corn" :{
+	top: '5%',
+	width:195,
+	height: 265,
+},
  //The comment out numbers are for the original placement I had. It created more of a 
  //grid feel. I think the idea of having them positioned at the bottom where your 
  //thumb naturally goes feels like a better UX choice.

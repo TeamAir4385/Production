@@ -1,1 +1,1 @@
-/Users/Home/Documents/Titanium_Studio_Workspace/Production/Resources/android/alloy/models/User.js
+/Users/Aaron/Documents/Titanium_Studio_Workspace/Production/Resources/android/alloy/models/User.js

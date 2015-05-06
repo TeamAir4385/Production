@@ -16,7 +16,7 @@
 				systemButton="Titanium.UI.iPhone.SystemButton.COMPOSE" />
 		</RightNavButton>
 		
-		<ImageView id="go" image="/images/goteam.png" />
+		<ImageView id="corn" image="/images/logo.png" />
 		
 		<Button id="cobButton"  />
 		<Button id="calendarButton"   />
