@@ -62,12 +62,14 @@ function Controller() {
     });
     clickedSettings ? $.__views.settingsButton.addEventListener("click", clickedSettings) : __defers["$.__views.settingsButton!click!clickedSettings"] = true;
     $.__views.index.rightNavButton = $.__views.settingsButton;
-    $.__views.go = Ti.UI.createImageView({
-        top: "15%",
-        id: "go",
-        image: "/images/goteam.png"
+    $.__views.corn = Ti.UI.createImageView({
+        top: "5%",
+        width: 195,
+        height: 265,
+        id: "corn",
+        image: "/images/logo.png"
     });
-    $.__views.index.add($.__views.go);
+    $.__views.index.add($.__views.corn);
     $.__views.cobButton = Ti.UI.createButton({
         width: 65,
         height: 65,
@@ -116,6 +118,7 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
+    $.index.open();
     $.cobButton.addEventListener("click", function() {
         Ti.Platform.openURL("http://www.wtamu.edu/academics/college-business.aspx");
     });
@@ -138,7 +141,6 @@ function Controller() {
     CloudPush.addEventListener("callback", function(evt) {
         alert("Notification received: " + evt.payload);
     });
-    $.index.open();
     __defers["$.__views.settingsButton!click!clickedSettings"] && $.__views.settingsButton.addEventListener("click", clickedSettings);
     __defers["$.__views.contactButton!click!contactUs"] && $.__views.contactButton.addEventListener("click", contactUs);
     _.extend($, exports);

@@ -108,20 +108,20 @@ function Controller() {
         passwordMask: "true"
     });
     $.__views.lvContainer.add($.__views.password);
-    $.__views.__alloyId6 = Ti.UI.createView({
+    $.__views.__alloyId23 = Ti.UI.createView({
         top: "10dp",
         height: Ti.UI.SIZE,
         width: Ti.UI.SIZE,
         layout: "horizontal",
-        id: "__alloyId6"
+        id: "__alloyId23"
     });
-    $.__views.lvContainer.add($.__views.__alloyId6);
+    $.__views.lvContainer.add($.__views.__alloyId23);
     $.__views.doLoginBtn = Ti.UI.createButton({
         id: "doLoginBtn",
         color: "#fff",
         title: "Login"
     });
-    $.__views.__alloyId6.add($.__views.doLoginBtn);
+    $.__views.__alloyId23.add($.__views.doLoginBtn);
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};

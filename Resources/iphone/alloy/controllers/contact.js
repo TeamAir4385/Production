@@ -41,15 +41,15 @@ function Controller() {
     });
     $.__views.contact && $.addTopLevelView($.__views.contact);
     doOpen ? $.__views.contact.addEventListener("open", doOpen) : __defers["$.__views.contact!open!doOpen"] = true;
-    $.__views.__alloyId1 = Ti.UI.createLabel({
+    $.__views.__alloyId20 = Ti.UI.createLabel({
         color: "#fff",
         text: "Please feel free to contact us if you are interested or have any questions!",
         top: "15",
         left: "10",
         right: "10",
-        id: "__alloyId1"
+        id: "__alloyId20"
     });
-    $.__views.contact.add($.__views.__alloyId1);
+    $.__views.contact.add($.__views.__alloyId20);
     $.__views.lvContainer = Ti.UI.createView({
         top: "65",
         width: "280dp",
@@ -150,13 +150,13 @@ function Controller() {
     Titanium.Network.createHTTPClient();
     $.submit.addEventListener("click", function() {
         var emailDialog = Titanium.UI.createEmailDialog();
-        emailDialog.setSubject("I'm curious about Going Green!");
-        emailDialog.setToRecipients([ "foo@gmail.com" ]);
+        emailDialog.setSubject("Please Sign Me Up!");
+        emailDialog.setToRecipients([ "wtcollegeofbusiness@gmail.com" ]);
         emailDialog.setMessageBody("<b>I'm curious about what the College of Business has to offer!\n\nFirst Name: " + $.fname.value + "\nLast Name : " + $.lname.value + "\nEmail: " + $.email.value + "\nPhone number: " + $.phone.value + "</b>å");
         emailDialog.setHtml(true);
         emailDialog.setBarColor("#336699");
         emailDialog.addEventListener("complete", function(e) {
-            e.result == emailDialog.SENT ? "android" != Ti.Platform.osname && alert("message was sent") : alert("message was not sent. result = " + e.result);
+            e.result == emailDialog.SENT ? "android" != Ti.Platform.osname && alert("Your Message Was Sent!") : alert("message was not sent. result = " + e.result);
         });
         emailDialog.open();
     });

@@ -29,6 +29,9 @@ function clickedSettings(e) {
 	}
 }
 
+// open window
+$.index.open(); 
+
 //Main page buttons, likened to the WT app
 
 // cob button
@@ -157,5 +160,3 @@ function subscribeToChannel (deviceToken) {
     });
 }
 
-// open window
-$.index.open(); 
