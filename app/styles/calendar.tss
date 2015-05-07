@@ -1,21 +1,20 @@
+//Secia and Kameryn
+//Some work needs done to make it fit better with app's theme
 ".container": {
-	backgroundColor:"white"
+	backgroundColor:"#222"
 }
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	top:30,
 	color: "black",
-	font: { fontSize: 20, fontWeight: 'bold' }
-	
+	font: { fontSize: 20, fontWeight: 'bold' }	
 }
 
 "#label": {
 	font: {
 		fontSize: 12
-	
 	}
-	
 }
 "#symbol": {
 	left: 15,
@@ -26,11 +25,11 @@
 	left: 0
 }
 "#atomProperties": {
-	top: 0, left: 80, right: 0, bottom: 0,
+	top: 0, left: 80, right: 80, bottom: 0,
 	layout: "vertical"
 },
 "#atomProperties[platform=android]": {
-	left: 65
+	top: 0, left: 65, right: 65, bottom: 0,
 },
 "#name": {
 	left: 0, top: 4,

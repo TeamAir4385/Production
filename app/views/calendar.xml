@@ -1,7 +1,7 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!-- Secia and Kameryn -->
 <Alloy>
-   <Window class="container">
-      <ListView id="eventList" defaultItemTemplate="elementTemplate">
+	<Window id="calendar" title="Upcoming Events" onOpen="doOpen" >
+		<ListView id="eventList" defaultItemTemplate="elementTemplate">
          <HeaderView>
             <View backgroundColor="#DDD" height="Ti.UI.SIZE">
                <Label>Calendar Events</Label>
@@ -23,17 +23,5 @@
             </ItemTemplate>
          </Templates>
       </ListView>
-   </Window>
-</Alloy> -->
-
-<Alloy>
-	<Window id="calendar" title="Upcoming Events" onOpen="doOpen" >
-	    <ListView id="list">
-	        <ListSection>
-	            <ListItem title="List item 1"></ListItem>
-	            <ListItem title="List item 2"></ListItem>
-	            <ListItem title="List item 3"></ListItem>
-	        </ListSection>
-	    </ListView>
     </Window>
 </Alloy>

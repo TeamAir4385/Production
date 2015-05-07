@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
+	<!--Need to add support for cloud calendar events based on Secia and Kameryn's ACS stuff -->
     <property name="acs-api-key-production" type="string">zVQ6altk03APCOxFjBJlfSITP70Zsz7k</property>
     <property name="acs-api-key-development" type="string">PySupKzDhHKVDDunnBOJndMlBbQQPpNZ</property>
     <id>com.goapplication</id>
