@@ -1,5 +1,7 @@
+<!-- DS -->
 <Alloy>
 	<Window id="settings" title="Settings" onOpen="doOpen">	
+		<!-- DS -->
 		<!--This only holds text. I'm too stupid to make list/tableViews -->
 		<Label id="Push" text="Push Notifications" />
 		<Label id="Login" text="Log In To your Account"/>

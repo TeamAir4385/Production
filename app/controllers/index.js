@@ -6,6 +6,7 @@ var args = arguments[0] || {}; //loads whatever from index.js. We technically do
  * issue loading for iOS.
  */
 /*
+ //DS
 if (OS_IOS) {
 	Alloy.Globals.navgroup = $.index;
 }
@@ -18,6 +19,7 @@ if (OS_ANDROID) {
 /* Adds the options wrench in Android and is supposed to add options menu for iOS
  * Works for Android but haven't tested on iOS
  */
+//DS
 function clickedSettings(e) {
 	var settingsController = Alloy.createController('settings');
 	var win = settingsController.getView();
@@ -29,13 +31,11 @@ function clickedSettings(e) {
 	}
 }
 
-// open window
-$.index.open(); 
-
 //Main page buttons, likened to the WT app
 
 // cob button
 //opens the WT CoB page. Correct me if this is the wrong site.
+//DS
 $.cobButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("http://www.wtamu.edu/academics/college-business.aspx");
@@ -43,11 +43,12 @@ $.cobButton.addEventListener('click', function(e)
 
 // calendar button
 //not functional yet
-$.calendarButton.addEventListener('click', function(e)
+/*$.calendarButton.addEventListener('click', function(e)
 {
 	if(OS_IOS){
 		Titanium.Platform.openURL('CALSHOW://');//show calendar
 	} else {
+			//DS
 		    if (Titanium.Platform.osname=="android"){
 
 	        //Params needed to create the android intent.
@@ -80,35 +81,27 @@ $.calendarButton.addEventListener('click', function(e)
 	    }
 	}
 });
+*/
+function calendar(e) {
+	Alloy.createController('calendar').getView();
+}
 
 // contact us button
+//DS
 function contactUs(e) {
 	Alloy.createController('contact').getView();
 }
  //---------------------------------------------------
  
  // facebook button
+ //DS
 $.facebookButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("http://www.facebook.com/WTAMUCOB");
-	
-	/*var strUrl = "http://www.facebook.com/WTAMUCOB";
-	if (OS_IOS) {
-	    strUrl = "http://www.facebook.com/WTAMUCOB";
-	    if (Titanium.Platform.canOpenURL(strUrl)) {
-	        Ti.Platform.openURL(strUrl);
-	    } else {
-	        strUrl = "http://www.facebook.com/WTAMUCOB";
-	        Ti.Platform.openURL(strUrl);
-	    }
-	} else {
-	
-	    var result = Ti.Platform.openURL(strUrl);
-	    Ti.API.info('RESULT = ' + result);
-	}  */
 });
 
 // youtube button
+//DS
 $.youtubeButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("https://www.youtube.com/channel/UCENCoEEcsLJvyWaMjonwFuQ");
@@ -160,3 +153,5 @@ function subscribeToChannel (deviceToken) {
     });
 }
 
+// open window
+$.index.open(); 

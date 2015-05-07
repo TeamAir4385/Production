@@ -1,28 +1,39 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <Alloy>
-	<Window class="container">
-<ListView id="eventList" defaultItemTemplate="elementTemplate">
-        	<HeaderView>
-                <View backgroundColor="#DDD" height="Ti.UI.SIZE">
-                    <Label>Calendar Events</Label>
-                </View>>
-            </HeaderView>
-            <ListSection id="listItemContainer">
-			</ListSection>
-    <Templates>
-        <ItemTemplate name="elementTemplate">
-            <Label bindId="symbol" id="symbol" />
-            <View id="atomProperties">
-                <Label bindId="name" id="name" />
-                
-                <Label bindId="details" id="details" />
-                <View id="secondLine">
-                	<Label class="line2 fieldLabel" text="Start Date: " />
-                	 <Label bindId="start_time" id="start_time" />     
-                </View>
+   <Window class="container">
+      <ListView id="eventList" defaultItemTemplate="elementTemplate">
+         <HeaderView>
+            <View backgroundColor="#DDD" height="Ti.UI.SIZE">
+               <Label>Calendar Events</Label>
             </View>
-			<ImageView bindId="image" id="image" />
-        </ItemTemplate>
-    </Templates>
-</ListView>	
-	</Window>
+         </HeaderView>
+         <ListSection id="listItemContainer" />
+         <Templates>
+            <ItemTemplate name="elementTemplate">
+               <Label bindId="symbol" id="symbol" />
+               <View id="atomProperties">
+                  <Label bindId="name" id="name" />
+                  <Label bindId="details" id="details" />
+                  <View id="secondLine">
+                     <Label class="line2 fieldLabel" text="Start Date: " />
+                     <Label bindId="start_time" id="start_time" />
+                  </View>
+               </View>
+               <ImageView bindId="image" id="image" />
+            </ItemTemplate>
+         </Templates>
+      </ListView>
+   </Window>
+</Alloy> -->
+
+<Alloy>
+	<Window id="calendar" title="Upcoming Events" onOpen="doOpen" >
+	    <ListView id="list">
+	        <ListSection>
+	            <ListItem title="List item 1"></ListItem>
+	            <ListItem title="List item 2"></ListItem>
+	            <ListItem title="List item 3"></ListItem>
+	        </ListSection>
+	    </ListView>
+    </Window>
 </Alloy>

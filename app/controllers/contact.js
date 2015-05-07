@@ -1,8 +1,9 @@
 var args = arguments[0] || {};
-
+//DS
 var win 		= Ti.UI.currentWindow;
 var contactReq 	= Titanium.Network.createHTTPClient();
 
+//DS
 function doOpen(e){
 	var actionBar = e.source.activity.actionBar;
 
@@ -20,7 +21,7 @@ function doOpen(e){
 }
 
 //this will open an email once submit is clicked 
-
+//DS
 $.submit.addEventListener('click', function(e) {
 	
 	var emailDialog = Titanium.UI.createEmailDialog();

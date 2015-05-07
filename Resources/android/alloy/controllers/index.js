@@ -8,26 +8,26 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-    function __alloyId21() {
-        $.__views.index.removeEventListener("open", __alloyId21);
+    function __alloyId8() {
+        $.__views.index.removeEventListener("open", __alloyId8);
         if ($.__views.index.activity) ; else {
             Ti.API.warn("You attempted to access an Activity on a lightweight Window or other");
             Ti.API.warn("UI component which does not have an Android activity. Android Activities");
             Ti.API.warn("are valid with only windows in TabGroups or heavyweight Windows.");
         }
     }
-    function __alloyId25() {
-        $.__views.index.removeEventListener("open", __alloyId25);
+    function __alloyId12() {
+        $.__views.index.removeEventListener("open", __alloyId12);
         if ($.__views.index.activity) $.__views.index.activity.onCreateOptionsMenu = function(e) {
-            var __alloyId24 = {
+            var __alloyId11 = {
                 title: "Settings",
                 icon: "/images/overflow.png",
                 showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM,
-                id: "__alloyId23"
+                id: "__alloyId10"
             };
-            $.__views.__alloyId23 = e.menu.add(_.pick(__alloyId24, Alloy.Android.menuItemCreateArgs));
-            $.__views.__alloyId23.applyProperties(_.omit(__alloyId24, Alloy.Android.menuItemCreateArgs));
-            clickedSettings ? $.__views.__alloyId23.addEventListener("click", clickedSettings) : __defers["$.__views.__alloyId23!click!clickedSettings"] = true;
+            $.__views.__alloyId10 = e.menu.add(_.pick(__alloyId11, Alloy.Android.menuItemCreateArgs));
+            $.__views.__alloyId10.applyProperties(_.omit(__alloyId11, Alloy.Android.menuItemCreateArgs));
+            clickedSettings ? $.__views.__alloyId10.addEventListener("click", clickedSettings) : __defers["$.__views.__alloyId10!click!clickedSettings"] = true;
         }; else {
             Ti.API.warn("You attempted to attach an Android Menu to a lightweight Window");
             Ti.API.warn("or other UI component which does not have an Android activity.");
@@ -38,6 +38,9 @@ function Controller() {
         var settingsController = Alloy.createController("settings");
         var win = settingsController.getView();
         Alloy.Globals.navgroup ? Alloy.Globals.navgroup.openWindow(win) : win.open();
+    }
+    function calendar() {
+        Alloy.createController("calendar").getView();
     }
     function contactUs() {
         Alloy.createController("contact").getView();
@@ -80,8 +83,8 @@ function Controller() {
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.index.addEventListener("open", __alloyId21);
-    $.__views.index.addEventListener("open", __alloyId25);
+    $.__views.index.addEventListener("open", __alloyId8);
+    $.__views.index.addEventListener("open", __alloyId12);
     $.__views.corn = Ti.UI.createImageView({
         top: "5%",
         width: 195,
@@ -107,6 +110,7 @@ function Controller() {
         id: "calendarButton"
     });
     $.__views.index.add($.__views.calendarButton);
+    calendar ? $.__views.calendarButton.addEventListener("click", calendar) : __defers["$.__views.calendarButton!click!calendar"] = true;
     $.__views.contactButton = Ti.UI.createButton({
         width: 65,
         height: 65,
@@ -141,26 +145,6 @@ function Controller() {
     $.cobButton.addEventListener("click", function() {
         Ti.Platform.openURL("http://www.wtamu.edu/academics/college-business.aspx");
     });
-    $.calendarButton.addEventListener("click", function() {
-        var packageStr = "com.google.android.calendar";
-        var classStr = "com.android.calendar.LaunchActivity";
-        var actionStr = Ti.Android.ACTION_VIEW;
-        var model = Ti.Platform.model;
-        if (-1 != model.indexOf("HTC") || -1 != model.indexOf("htc")) {
-            packageStr = "com.htc.calendar";
-            classStr = "com.htc.calendar.MonthActivity";
-            actionStr = Ti.Android.ACTION_MAIN;
-        } else {
-            var version = parseFloat(Ti.Platform.version);
-            2.4 > version && (packageStr = "com.android.calendar");
-        }
-        var intent = Ti.Android.createIntent({
-            action: actionStr,
-            packageName: packageStr,
-            className: classStr
-        });
-        Ti.Android.currentActivity.startActivity(intent);
-    });
     $.facebookButton.addEventListener("click", function() {
         Ti.Platform.openURL("http://www.facebook.com/WTAMUCOB");
     });
@@ -178,7 +162,8 @@ function Controller() {
         alert("Notification received: " + evt.payload);
     });
     $.index.open();
-    __defers["$.__views.__alloyId23!click!clickedSettings"] && $.__views.__alloyId23.addEventListener("click", clickedSettings);
+    __defers["$.__views.__alloyId10!click!clickedSettings"] && $.__views.__alloyId10.addEventListener("click", clickedSettings);
+    __defers["$.__views.calendarButton!click!calendar"] && $.__views.calendarButton.addEventListener("click", calendar);
     __defers["$.__views.contactButton!click!contactUs"] && $.__views.contactButton.addEventListener("click", contactUs);
     _.extend($, exports);
 }

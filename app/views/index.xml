@@ -1,4 +1,5 @@
 	<!--Aaron Was Here-->
+	<!-- DS -->
 <Alloy>
 	<Window id="index" >
 	<ActionBar id="actionbar" />
@@ -20,7 +21,7 @@
 		<ImageView id="corn" image="/images/logo.png" />
 		
 		<Button id="cobButton"  />
-		<Button id="calendarButton"   />
+		<Button id="calendarButton" onClick="calendar" />
 		<Button id="contactButton" onClick="contactUs" />	
 		
 		<Button id="facebookButton" />
@@ -28,13 +29,3 @@
 		
 	</Window>
 </Alloy>
-
-
-<!--Alloy>
-	<Window id= "index" > 
-    	<Require id="home" src="home" platform="android"/>
-		<NavigationWindow id="index" platform="ios">
-			<Require src="home" id="home"/>
-		</NavigationWindow>
-	</Window>
-</Alloy-->

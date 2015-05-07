@@ -41,15 +41,15 @@ function Controller() {
     });
     $.__views.contact && $.addTopLevelView($.__views.contact);
     doOpen ? $.__views.contact.addEventListener("open", doOpen) : __defers["$.__views.contact!open!doOpen"] = true;
-    $.__views.__alloyId20 = Ti.UI.createLabel({
+    $.__views.__alloyId7 = Ti.UI.createLabel({
         color: "#fff",
         text: "Please feel free to contact us if you are interested or have any questions!",
         top: "15",
         left: "10",
         right: "10",
-        id: "__alloyId20"
+        id: "__alloyId7"
     });
-    $.__views.contact.add($.__views.__alloyId20);
+    $.__views.contact.add($.__views.__alloyId7);
     $.__views.lvContainer = Ti.UI.createView({
         top: "65",
         width: "280dp",

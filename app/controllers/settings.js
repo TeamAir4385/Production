@@ -1,5 +1,5 @@
 var args = arguments[0] || {};
-
+//DS
 function doOpen(e){
 	var actionBar = e.source.activity.actionBar;
 
@@ -15,7 +15,7 @@ function doOpen(e){
 		e.source.activity.invalidateOptionsMenu();
 	}	
 }
-
+//DS
 function clickedLogin(e) {
 	Alloy.createController('login').getView();
 }
@@ -23,11 +23,12 @@ function clickedLogin(e) {
 //switch
 //http://docs.appcelerator.com/titanium/3.0/#!/api/Titanium.UI.Switch
 //Might need to add things for iOS
+//DS
 var pushSwitch = Ti.UI.createSwitch({
   value:true // mandatory property for iOS 
 });
 //$.settings.add(pushSwitch);
-
+//DS
 pushSwitch.addEventListener('change',function(e){
   Ti.API.info('Switch value: ' + pushSwitch.value);
 });

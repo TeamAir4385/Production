@@ -1,4 +1,5 @@
 /** Aaron Was Here....**/
+//DS
 "#index": {
 	backgroundColor: "#222222", //This will be replaced with a shiny wallpaper soon(TM).
 },
@@ -23,6 +24,7 @@
  //grid feel. I think the idea of having them positioned at the bottom where your 
  //thumb naturally goes feels like a better UX choice.
  
+ //DS
  //images located in /app/assets/images/
 "#cobButton" : {
 	top: '50%', //150
