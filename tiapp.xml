@@ -44,7 +44,7 @@
         <manifest>
             <application android:theme="@style/Theme.Gotheme"/>
             <uses-sdk android:minSdkVersion="10"/>
-            <uses-sdk android:targetSdkVersion="16"/>
+            <uses-sdk android:targetSdkVersion="20"/>
         </manifest>
     </android>
     <mobileweb>
