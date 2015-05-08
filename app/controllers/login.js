@@ -15,7 +15,7 @@ function doOpen(e){
 		e.source.activity.invalidateOptionsMenu();
 	}	
 }
-
+//DS: I pulled Lauren's code over for user login stuff I only want credit for the porting as I didn't write this.
 function doLoginBtnClicked() {
 
 	// create instance of the user model

@@ -3,7 +3,7 @@ var args = arguments[0] || {};
 var win 		= Ti.UI.currentWindow;
 var contactReq 	= Titanium.Network.createHTTPClient();
 
-//DS
+//DS - Each time you see this code, it's used to call the themed actionbar for Android.
 function doOpen(e){
 	var actionBar = e.source.activity.actionBar;
 
@@ -21,7 +21,9 @@ function doOpen(e){
 }
 
 //this will open an email once submit is clicked 
-//DS
+//DS - 
+//Letty worked on the email code but I helped finish it and get it to do something.
+//Still wish it was more underthe hood but ACS doesn't seem to handle client side emailing.
 $.submit.addEventListener('click', function(e) {
 	
 	var emailDialog = Titanium.UI.createEmailDialog();

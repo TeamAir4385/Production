@@ -17,13 +17,14 @@
 			<Button id="settingsButton" onClick="clickedSettings" 
 				systemButton="Titanium.UI.iPhone.SystemButton.COMPOSE" />
 		</RightNavButton>
-		
+		<!-- Needs to change per BAbb's request -->
 		<ImageView id="corn" image="/images/logo.png" />
 		
+		<!-- top row of buttons. Positioned with .tss-->
 		<Button id="cobButton"  />
 		<Button id="calendarButton" onClick="calendar" />
 		<Button id="contactButton" onClick="contactUs" />	
-		
+		<!-- bottom row of buttons -->
 		<Button id="facebookButton" />
 		<Button id="youtubeButton"  />
 		

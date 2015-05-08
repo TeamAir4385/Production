@@ -15,6 +15,7 @@ function doOpen(e){
 		e.source.activity.invalidateOptionsMenu();
 	}	
 }
+//DS - Secia and Kameryn wrote the code and got it to com with ACS. I jsut ported it over for the app.
 //Secia and Kameryn
 var Cloud = require('ti.cloud');
 Cloud.debug = true;  // optional; if you add this line, set it to false for production
@@ -45,12 +46,3 @@ Cloud.Events.search(
     	
     	$.eventList.sections[0].setItems(listViewItems);
 });
-
-/*
-//opens window
-$.calendar.open();
-
-*/
-
-
-

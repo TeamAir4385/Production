@@ -8,8 +8,15 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-    function showCalendars(calendars) {
-        for (var i = 0; i < calendars.length; i++) Ti.API.info(calendars[i].name);
+    function doOpen(e) {
+        var actionBar = e.source.activity.actionBar;
+        if (actionBar) {
+            actionBar.displayHomeAsUp = true;
+            actionBar.onHomeIconItemSelected = function() {
+                e.source.close();
+            };
+            e.source.activity.invalidateOptionsMenu();
+        }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "calendar";
@@ -26,11 +33,13 @@ function Controller() {
     }
     var $ = this;
     var exports = {};
+    var __defers = {};
     $.__views.calendar = Ti.UI.createWindow({
-        backgroundColor: "white",
-        id: "calendar"
+        id: "calendar",
+        title: "Upcoming Events"
     });
     $.__views.calendar && $.addTopLevelView($.__views.calendar);
+    doOpen ? $.__views.calendar.addEventListener("open", doOpen) : __defers["$.__views.calendar!open!doOpen"] = true;
     $.__views.__alloyId1 = Ti.UI.createView({
         backgroundColor: "#DDD",
         height: Ti.UI.SIZE,
@@ -158,7 +167,7 @@ function Controller() {
         properties: {
             top: 0,
             left: 80,
-            right: 0,
+            right: 80,
             bottom: 0,
             layout: "vertical"
         }
@@ -195,25 +204,34 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
-    Ti.API.info("ALL CALENDARS:");
-    showCalendars(Ti.Calendar.allCalendars);
-    var CALENDAR_TO_USE = 3;
-    var calendar = Ti.Calendar.getCalendarById(CALENDAR_TO_USE);
-    var eventBegins = new Date(2010, 11, 26, 12, 0, 0);
-    var eventEnds = new Date(2010, 11, 26, 14, 0, 0);
-    var details = {
-        title: "Do some stuff",
-        description: "I'm going to do some stuff at this time.",
-        begin: eventBegins,
-        end: eventEnds
-    };
-    var event = calendar.createEvent(details);
-    var reminderDetails = {
-        minutes: 10,
-        method: Ti.Calendar.METHOD_EMAIL
-    };
-    event.createReminder(reminderDetails);
-    $.calendar.open();
+    var Cloud = require("ti.cloud");
+    Cloud.debug = true;
+    Cloud.Events.search({
+        name: "Party"
+    }, function(e) {
+        if (e.success) {
+            var listViewItems = [];
+            for (var i = 0; i < e.events.length; i++) {
+                {
+                    e.events[i];
+                }
+                listViewItems.push({
+                    name: {
+                        text: e.events[i].name
+                    },
+                    start_time: {
+                        text: e.events[i].start_time
+                    },
+                    details: {
+                        text: e.events[i].details
+                    }
+                });
+            }
+            $.calendar.open();
+        } else alert("Error:\n" + (e.error && e.message || JSON.stringify(e)));
+        $.eventList.sections[0].setItems(listViewItems);
+    });
+    __defers["$.__views.calendar!open!doOpen"] && $.__views.calendar.addEventListener("open", doOpen);
     _.extend($, exports);
 }
 

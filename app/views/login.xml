@@ -4,6 +4,7 @@
 		<Label id='loginText'></Label>
 		<!--Using a nested setup to try to keep things consistent. It didn't look right otherwise -->
 		<View id="lvContainer" >
+			<!-- Only hinttext and masking for pw. no integrety checking. Maybe in a later update -->
 			<TextField id="email" class='tfWrapper' hintText="Email" />
 			<TextField id="password" class='tfWrapper' hintText="Password" passwordMask="true"/>
 			<View class="centerHelper">

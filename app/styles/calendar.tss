@@ -58,4 +58,4 @@
 },
 ".line2": {
 	font: { fontSize: 10 }
-},
+}

@@ -82,6 +82,7 @@ $.cobButton.addEventListener('click', function(e)
 	}
 });
 */
+//DS
 function calendar(e) {
 	Alloy.createController('calendar').getView();
 }
@@ -110,7 +111,7 @@ $.youtubeButton.addEventListener('click', function(e)
 //---------------------------------------------------
 //This is what the documentation says to do in regards to setting up Cloudpush modules retrievedDeviceToken(). --Lauren
 // Require the module
-
+//DS: I ported this over as well. I didn't write the code. 
 var CloudPush = require('ti.cloudpush');
 var Cloud = require("ti.cloud");
 var deviceToken = null;

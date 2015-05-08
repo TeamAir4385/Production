@@ -8,6 +8,9 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
+    function calendar() {
+        Alloy.createController("calendar").getView();
+    }
     function contactUs() {
         Alloy.createController("contact").getView();
     }
@@ -74,6 +77,7 @@ function Controller() {
         id: "calendarButton"
     });
     $.__views.index.add($.__views.calendarButton);
+    calendar ? $.__views.calendarButton.addEventListener("click", calendar) : __defers["$.__views.calendarButton!click!calendar"] = true;
     $.__views.contactButton = Ti.UI.createButton({
         width: 65,
         height: 65,
@@ -108,8 +112,6 @@ function Controller() {
     $.cobButton.addEventListener("click", function() {
         Ti.Platform.openURL("http://www.wtamu.edu/academics/college-business.aspx");
     });
-    $.calendarButton.addEventListener("click", function() {
-    });
     $.facebookButton.addEventListener("click", function() {
         Ti.Platform.openURL("http://www.facebook.com/WTAMUCOB");
     });
@@ -127,6 +129,7 @@ function Controller() {
         alert("Notification received: " + evt.payload);
     });
     $.index.open();
+    __defers["$.__views.calendarButton!click!calendar"] && $.__views.calendarButton.addEventListener("click", calendar);
     __defers["$.__views.contactButton!click!contactUs"] && $.__views.contactButton.addEventListener("click", contactUs);
     _.extend($, exports);
 }
