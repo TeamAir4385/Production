@@ -35,7 +35,7 @@ function clickedSettings(e) {
 
 // cob button
 //opens the WT CoB page. Correct me if this is the wrong site.
-//DS
+//DS and AM
 $.cobButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("http://www.wtamu.edu/academics/college-business.aspx");
@@ -82,27 +82,27 @@ $.cobButton.addEventListener('click', function(e)
 	}
 });
 */
-//DS
+//DS and AM
 function calendar(e) {
 	Alloy.createController('calendar').getView();
 }
 
 // contact us button
-//DS
+//DS and AM
 function contactUs(e) {
 	Alloy.createController('contact').getView();
 }
  //---------------------------------------------------
  
  // facebook button
- //DS
+ //DS and AM
 $.facebookButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("http://www.facebook.com/WTAMUCOB");
 });
 
 // youtube button
-//DS
+//DS and AM
 $.youtubeButton.addEventListener('click', function(e)
 {
 	Ti.Platform.openURL("https://www.youtube.com/channel/UCENCoEEcsLJvyWaMjonwFuQ");
